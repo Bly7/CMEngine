@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{f774fce6-ffea-4d5e-9b3a-49280fb49a35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Systems">
+      <UniqueIdentifier>{ae4c635b-906f-495c-882f-a8f1c370a631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment">
+      <UniqueIdentifier>{90ade584-6cd7-404a-883d-a74230b5fb4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Render">
+      <UniqueIdentifier>{0b73d337-e3e0-46fb-84e4-2ba48e1ef8e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Machine Learning">
+      <UniqueIdentifier>{2aa139c5-414a-4312-a403-ec39ac38543d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Systems\Console">
+      <UniqueIdentifier>{e966b2c3-a77c-45e4-a5a9-c4808cf4f20e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Systems\Console\Main">
+      <UniqueIdentifier>{4a924cfd-c70a-4b57-a96b-1c43b9276d12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Systems\Console\Message">
+      <UniqueIdentifier>{a2825758-725a-47dd-b7b8-3f5872fc576a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Base Message Systems">
+      <UniqueIdentifier>{46cb6608-17be-4fe7-9c84-348ee6b501c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Base Message Systems\Main">
+      <UniqueIdentifier>{038b513f-1a40-4ed6-8219-4a9ee4f3b300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Base Message Systems\Message">
+      <UniqueIdentifier>{7060babf-a044-4db2-8f07-e1536efeb9a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Framework">
+      <UniqueIdentifier>{d366d58d-9011-48d1-849f-1d033a522f13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Render\Main">
+      <UniqueIdentifier>{2b5eb595-d3f7-4c55-a1c6-069e38aea4eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Render\Message">
+      <UniqueIdentifier>{2e9933bd-197a-4f79-9ad5-cc7c33c98d89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Render\Framework">
+      <UniqueIdentifier>{cb925160-851d-4cd0-852c-d686371855ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Render\Framework\Window">
+      <UniqueIdentifier>{cd1c56b8-a20f-4ca3-a626-f551ff34bdcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Settings">
+      <UniqueIdentifier>{42dfdac5-552a-4798-9976-ffd87ac31ba4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SConsole.cpp">
+      <Filter>Header Files\Engine\Systems\Console\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="SConsole_Message.cpp">
+      <Filter>Header Files\Engine\Systems\Console\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageSystem.cpp">
+      <Filter>Header Files\Engine\Base Message Systems\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Message.cpp">
+      <Filter>Header Files\Engine\Base Message Systems\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="SRender.cpp">
+      <Filter>Header Files\CurrentDevelopment\Render\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="SRender_Message.cpp">
+      <Filter>Header Files\CurrentDevelopment\Render\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Header Files\CurrentDevelopment\Render\Framework\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="SSettings.cpp">
+      <Filter>Header Files\CurrentDevelopment\Settings</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SMachineLearning.h">
+      <Filter>Header Files\CurrentDevelopment\Machine Learning</Filter>
+    </ClInclude>
+    <ClInclude Include="SConsole.h">
+      <Filter>Header Files\Engine\Systems\Console\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="SConsole_Message.h">
+      <Filter>Header Files\Engine\Systems\Console\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageSystem.h">
+      <Filter>Header Files\Engine\Base Message Systems\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>Header Files\Engine\Base Message Systems\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="SRender.h">
+      <Filter>Header Files\CurrentDevelopment\Render\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="SRender_Message.h">
+      <Filter>Header Files\CurrentDevelopment\Render\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Header Files\CurrentDevelopment\Render\Framework\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="SSettings.h">
+      <Filter>Header Files\CurrentDevelopment\Settings</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
