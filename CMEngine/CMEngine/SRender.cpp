@@ -56,7 +56,7 @@ void SRender::WindowCreate(MessageBase* msg)
 					  mrwc->height,
 					  mrwc->title);
 
-		message_bus->AddMessage(genMessageBase(name_, "Window " + mrwc->title + " Created."));
+		message_bus->AddMessage(genMessageBase(name_, "Window \"" + mrwc->title + "\" Created."));
 	}
 	else
 	{
