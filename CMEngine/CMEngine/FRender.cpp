@@ -41,7 +41,7 @@ bool FRender::CreateWindow(std::string Title,
 	}
 
 	Window* nWindow = new Window;
-	nWindow->init(Width, Height, "Title");
+	nWindow->init(Width, Height, Title);
 	nWindow->window_number_ = WinNumber;
 	window_list.push_back(nWindow);
 

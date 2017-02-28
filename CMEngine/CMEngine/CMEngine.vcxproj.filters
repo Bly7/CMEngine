@@ -22,12 +22,6 @@
     <Filter Include="Header Files\CurrentDevelopment">
       <UniqueIdentifier>{90ade584-6cd7-404a-883d-a74230b5fb4f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\CurrentDevelopment\Render">
-      <UniqueIdentifier>{0b73d337-e3e0-46fb-84e4-2ba48e1ef8e8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\CurrentDevelopment\Machine Learning">
-      <UniqueIdentifier>{2aa139c5-414a-4312-a403-ec39ac38543d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Engine\Systems\Console">
       <UniqueIdentifier>{e966b2c3-a77c-45e4-a5a9-c4808cf4f20e}</UniqueIdentifier>
     </Filter>
@@ -49,19 +43,37 @@
     <Filter Include="Header Files\Engine\Framework">
       <UniqueIdentifier>{d366d58d-9011-48d1-849f-1d033a522f13}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\CurrentDevelopment\Render\Main">
-      <UniqueIdentifier>{2b5eb595-d3f7-4c55-a1c6-069e38aea4eb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\CurrentDevelopment\Render\Message">
-      <UniqueIdentifier>{2e9933bd-197a-4f79-9ad5-cc7c33c98d89}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\CurrentDevelopment\Render\Framework">
+    <Filter Include="Header Files\CurrentDevelopment\Framework">
       <UniqueIdentifier>{cb925160-851d-4cd0-852c-d686371855ac}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\CurrentDevelopment\Render\Framework\Window">
+    <Filter Include="Header Files\CurrentDevelopment\Framework\Main">
+      <UniqueIdentifier>{f72473d1-68ac-45f5-9900-fe488a23edb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Framework\Render">
+      <UniqueIdentifier>{c6c5c500-702c-458e-80ea-ddbe87fce83c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Framework\Render\Window">
       <UniqueIdentifier>{cd1c56b8-a20f-4ca3-a626-f551ff34bdcb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\CurrentDevelopment\Settings">
+    <Filter Include="Header Files\CurrentDevelopment\Framework\Message">
+      <UniqueIdentifier>{11d00478-c7af-437e-8672-a9f1c000a286}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Systems">
+      <UniqueIdentifier>{d440ba44-5549-4020-8dc4-9d35a884706f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Systems\Render">
+      <UniqueIdentifier>{0b73d337-e3e0-46fb-84e4-2ba48e1ef8e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Systems\Render\Main">
+      <UniqueIdentifier>{2b5eb595-d3f7-4c55-a1c6-069e38aea4eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Systems\Render\Message">
+      <UniqueIdentifier>{2e9933bd-197a-4f79-9ad5-cc7c33c98d89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Systems\Machine Learning">
+      <UniqueIdentifier>{2aa139c5-414a-4312-a403-ec39ac38543d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CurrentDevelopment\Systems\Settings">
       <UniqueIdentifier>{42dfdac5-552a-4798-9976-ffd87ac31ba4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -82,21 +94,30 @@
       <Filter>Header Files\Engine\Base Message Systems\Message</Filter>
     </ClCompile>
     <ClCompile Include="SRender.cpp">
-      <Filter>Header Files\CurrentDevelopment\Render\Main</Filter>
+      <Filter>Header Files\CurrentDevelopment\Systems\Render\Main</Filter>
     </ClCompile>
     <ClCompile Include="SRender_Message.cpp">
-      <Filter>Header Files\CurrentDevelopment\Render\Message</Filter>
+      <Filter>Header Files\CurrentDevelopment\Systems\Render\Message</Filter>
     </ClCompile>
     <ClCompile Include="Window.cpp">
-      <Filter>Header Files\CurrentDevelopment\Render\Framework\Window</Filter>
+      <Filter>Header Files\CurrentDevelopment\Framework\Render\Window</Filter>
     </ClCompile>
     <ClCompile Include="SSettings.cpp">
-      <Filter>Header Files\CurrentDevelopment\Settings</Filter>
+      <Filter>Header Files\CurrentDevelopment\Systems\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="FRender.cpp">
+      <Filter>Header Files\CurrentDevelopment\Framework\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework_Message.cpp">
+      <Filter>Header Files\CurrentDevelopment\Framework\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework.cpp">
+      <Filter>Header Files\CurrentDevelopment\Framework\Main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SMachineLearning.h">
-      <Filter>Header Files\CurrentDevelopment\Machine Learning</Filter>
+      <Filter>Header Files\CurrentDevelopment\Systems\Machine Learning</Filter>
     </ClInclude>
     <ClInclude Include="SConsole.h">
       <Filter>Header Files\Engine\Systems\Console\Main</Filter>
@@ -111,16 +132,25 @@
       <Filter>Header Files\Engine\Base Message Systems\Message</Filter>
     </ClInclude>
     <ClInclude Include="SRender.h">
-      <Filter>Header Files\CurrentDevelopment\Render\Main</Filter>
+      <Filter>Header Files\CurrentDevelopment\Systems\Render\Main</Filter>
     </ClInclude>
     <ClInclude Include="SRender_Message.h">
-      <Filter>Header Files\CurrentDevelopment\Render\Message</Filter>
+      <Filter>Header Files\CurrentDevelopment\Systems\Render\Message</Filter>
     </ClInclude>
     <ClInclude Include="Window.h">
-      <Filter>Header Files\CurrentDevelopment\Render\Framework\Window</Filter>
+      <Filter>Header Files\CurrentDevelopment\Framework\Render\Window</Filter>
     </ClInclude>
     <ClInclude Include="SSettings.h">
-      <Filter>Header Files\CurrentDevelopment\Settings</Filter>
+      <Filter>Header Files\CurrentDevelopment\Systems\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="FRender.h">
+      <Filter>Header Files\CurrentDevelopment\Framework\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework_Message.h">
+      <Filter>Header Files\CurrentDevelopment\Framework\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework.h">
+      <Filter>Header Files\CurrentDevelopment\Framework\Main</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
