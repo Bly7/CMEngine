@@ -4,6 +4,7 @@ Window::Window()
 {
 	sdl_window_ = NULL;
 	sdl_surface_screen_ = NULL;
+	window_number_ = -1;
 }
 
 bool Window::init(int width, int height, std::string title)
@@ -48,7 +49,12 @@ void Window::close()
 	SDL_Quit();
 }
 
-void Window::update()
+void Window::Clear()
+{
+
+}
+
+void Window::Update()
 {
 	SDL_UpdateWindowSurface(sdl_window_);
 }

@@ -11,6 +11,16 @@ void SRender::HandleMessage(MessageBase* msg)
 	if (msg->type >= REN_ENUM_START && msg->type <= REN_ENUM_END)
 		HandleRender(msg);
 
+	if (msg->type == FW_SET)
+	{
+		MsgFramework* fwmsg = dynamic_cast<MsgFramework*>(msg);
+		if (fwmsg)
+		{
+			framework = fwmsg->framework;
+		}
+	}
+
+
 
 }
 
@@ -25,12 +35,11 @@ void SRender::HandleRender(MessageBase* msg)
 		}
 		case REN_WINDOWCLOSE:
 		{
-			WindowClose();
+			WindowClose(msg);
 			break;
 		}
 		case REN_WINDOWUPDATE:
 		{
-			WindowUpdate();
 			break;
 		}
 		default:
@@ -49,36 +58,38 @@ void SRender::WindowCreate(MessageBase* msg)
 		return;
 	}
 
-	if (window_ == NULL)
-	{
-		window_ = new Window;
-		window_->init(mrwc->width,
-					  mrwc->height,
-					  mrwc->title);
+	bool success = framework->
+		GetRender()->CreateWindow(mrwc->title,
+			mrwc->width, mrwc->height, mrwc->num);
 
-		message_bus->AddMessage(genMessageBase(name_, "Window \"" + mrwc->title + "\" Created."));
+	if (success)
+	{
+		message_bus->AddMessage(genMessageBase(name_, "Window " + std::to_string(mrwc->num) + " Created."));
 	}
 	else
 	{
-		message_bus->AddMessage(genMessageBase(name_, "Window Already Exists."));
+		message_bus->AddMessage(genMessageBase(name_, "Window Number Already Exists."));
 	}
 }
 
-void SRender::WindowClose()
+void SRender::WindowClose(MessageBase* msg)
 {
-	if (window_ != NULL)
+	MsgRenWinClose* mrwc = dynamic_cast<MsgRenWinClose*>(msg);
+
+	if (!mrwc)
 	{
-		window_->close();
-		message_bus->AddMessage(genMessageBase(name_, "Window Closed."));
+		message_bus->AddMessage(genMessageBase(name_, "Invalid Window Close Message."));
+		mrwc = NULL;
+		return;
+	}
+
+	bool success = framework->GetRender()->CloseWindow(mrwc->num);
+	if (success)
+	{
+		message_bus->AddMessage(genMessageBase(name_, "Window " + std::to_string(mrwc->num) + " Closed."));
 	}
 	else
 	{
 		message_bus->AddMessage(genMessageBase(name_, "No Window To Close."));
 	}
-}
-
-void SRender::WindowUpdate()
-{
-	if (window_ != NULL)
-		window_->update();
 }

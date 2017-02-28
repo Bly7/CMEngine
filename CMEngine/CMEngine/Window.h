@@ -14,7 +14,11 @@ public:
 	bool init(int width, int height, std::string title);
 	void close();
 
-	void update();
+	void Clear();
+	void Update();
+
+public:
+	int window_number_;
 protected:
 	SDL_Window* sdl_window_;
 

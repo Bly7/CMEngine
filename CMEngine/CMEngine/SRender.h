@@ -11,6 +11,9 @@
 
 #include "SRender_Message.h"
 
+#include "Framework.h"
+#include "Framework_Message.h"
+
 class SRender : public ISystem
 {
 public:
@@ -27,10 +30,10 @@ protected:
 protected:
 	void WindowCreate(MessageBase* msg);
 
-	void WindowClose();
+	void WindowClose(MessageBase* msg);
 
-	void WindowUpdate();
-
+protected:
+	Framework* framework;
 };
 
 #endif // SRENDER_H_

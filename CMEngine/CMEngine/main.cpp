@@ -6,6 +6,8 @@
 #include "SRender.h"
 #include "SSettings.h"
 
+#include "Framework.h"
+
 #include <SDL/SDL.h>
 
 
@@ -17,8 +19,10 @@ int main(int argc, char* argv[])
 	SConsole con(&mb);
 	SRender ren(&mb);
 
-	mb.AddMessage(genMRWC("Game Loop", "Test Window"));
-		
+	Framework fw;
+	mb.AddMessage(genFWMsg("Game Loop", &fw));
+	mb.AddMessage(genMRWC("Game Loop", "Test Window", 0));
+	
 	mb.AddMessage(genMCMI("Game Loop", CON_ADDIGNORE, REN_WINDOWUPDATE));
 
 	int frames = 0;
@@ -31,19 +35,20 @@ int main(int argc, char* argv[])
 		{
 			running = false;
 
-			mb.AddMessage(genMessageBase("Game Loop", "Close Window.", REN_WINDOWCLOSE));
+			mb.AddMessage(genMRWClose("Game Loop", 0));
 		}
 
 		
-		mb.AddMessage(genMessageBase("Game Loop", "Update Window.", REN_WINDOWUPDATE));
-
 		mb.Update();
+
+		fw.Update();
+
 		frames++;
 	}
 
-
-
 	mb.Update();
+
+	fw.Cleanup();	
 
 	_getch();
 
