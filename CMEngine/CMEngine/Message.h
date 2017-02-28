@@ -27,7 +27,10 @@ enum MsgType
 	REN_WINDOWCLOSE,
 	REN_WINDOWUPDATE,
 
-	REN_ENUM_END
+	REN_ENUM_END,
+
+	//  Framework Types
+	FW_SET
 };
 
 struct MessageBase

@@ -149,6 +149,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Framework.cpp" />
+    <ClCompile Include="Framework_Message.cpp" />
+    <ClCompile Include="FRender.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Message.cpp" />
     <ClCompile Include="MessageSystem.cpp" />
@@ -160,6 +163,9 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="Framework_Message.h" />
+    <ClInclude Include="FRender.h" />
     <ClInclude Include="Message.h" />
     <ClInclude Include="SConsole_Message.h" />
     <ClInclude Include="SMachineLearning.h" />
