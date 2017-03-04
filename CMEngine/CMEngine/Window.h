@@ -17,6 +17,11 @@ public:
 	void Clear();
 	void Update();
 
+	void HandleEvents();
+
+public:
+	bool IsReadyToClose();
+
 public:
 	int window_number_;
 protected:
@@ -26,6 +31,9 @@ protected:
 
 	int width_;
 	int height_;
+
+protected:
+	bool readytoclose;
 };
 
 #endif
