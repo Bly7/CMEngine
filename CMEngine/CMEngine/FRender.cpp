@@ -2,7 +2,8 @@
 
 FRender::FRender()
 {
-
+	// Initialize SDL
+	SDL_Init(SDL_INIT_VIDEO);
 }
 
 void FRender::Update()
@@ -29,6 +30,9 @@ void FRender::Cleanup()
 	}
 
 	window_list.clear();
+
+	//Quit SDL subsystems
+	SDL_Quit();
 }
 
 bool FRender::CreateWindow(std::string Title,

@@ -29,13 +29,19 @@ int main(int argc, char* argv[])
 
 	bool running = true;
 
+	//Event handler
+	SDL_Event e;
+
 	while (running)
 	{
-		if ((SDL_GetTicks() / 1000) >= 5)
+		while (SDL_PollEvent(&e) != 0)
 		{
-			running = false;
+			if (e.type == SDL_QUIT)
+			{
+				running = false;
 
-			mb.AddMessage(genMRWClose("Game Loop", 0));
+				mb.AddMessage(genMRWClose("Game Loop", 0));
+			}
 		}
 
 		
@@ -48,9 +54,7 @@ int main(int argc, char* argv[])
 
 	mb.Update();
 
-	fw.Cleanup();	
-
-	_getch();
+	fw.Cleanup();
 
 	return 0;
 }
